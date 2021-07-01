@@ -1,18 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 
-// components
+// partials
 import { Header, Footer } from '../_partials';
-
-// icons
-import IconAll from '../../static/images/movie_all.svg';
-import IconFavorite from '../../static/images/movie_favorite.svg';
-
-// tabs
-const tabLinks = [
-  { path: '/', label: 'All', icon: IconAll },
-  { path: '/favorites', label: 'Favorites', icon: IconFavorite }
-];
 
 const BaseLayout = ({ children }) => {
   return (
