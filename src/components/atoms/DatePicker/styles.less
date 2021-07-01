@@ -1,0 +1,53 @@
+.mvpf-date__picker {
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  background: @gray-800;
+  border-color: @gray-800 !important;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    border-color: @gray-400;
+    box-shadow: none;
+  }
+
+  .ant-picker-input {
+    > input {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: @black-200;
+    }
+    .ant-picker-suffix {
+      width: 15px;
+      height: 16px;
+      object-fit: contain;
+    }
+  }
+  .ant-picker-clear {
+    .flex-center();
+    width: 20px;
+    height: 20px;
+    right: -2px;
+    background: @gray-800;
+  }
+
+  &.ant-picker-disabled {
+    background: @gray-800;
+
+    .ant-picker-input {
+      > input {
+        color: @gray-600;
+      }
+    }
+  }
+}
+
+.ant-form-item-has-error {
+  .ant-picker,
+  .ant-picker:not([disabled]):hover {
+    background: @gray-800;
+    border-color: @red-200 !important;
+  }
+}

@@ -1,0 +1,225 @@
+.mvpf-select {
+  box-shadow: none;
+
+  &.ant-select {
+    .ant-select-selector {
+      min-height: 35px;
+      background: @gray-100;
+      border-color: @gray-100 !important;
+      border-radius: 3px;
+      box-shadow: none !important;
+
+      &:hover,
+      &:focus {
+        border-color: @gray-100 !important;
+      }
+    }
+    .ant-select-arrow {
+      .flex-center();
+      width: 10px;
+      height: 5px;
+      margin-top: -6px;
+      right: 10px;
+
+      .arrow-down {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        &__active > path {
+          fill: @blue-100;
+        }
+
+        path {
+          .standard-transition();
+        }
+      }
+    }
+
+    // single
+    &-single {
+      .ant-select-selector {
+        .ant-select-selection-search {
+          .flex-align-center();
+          right: 40px;
+          left: 16px;
+
+          > input {
+            .mixin-input();
+          }
+        }
+        .ant-select-selection-placeholder,
+        .ant-select-selection-item {
+          .mixin-input();
+          .flex-align-center();
+          padding-right: 18px;
+        }
+        .ant-select-selection-placeholder {
+          color: @gray-600;
+        }
+      }
+    }
+
+    // multiple & tags
+    &-multiple,
+    &-tags {
+      .ant-select-selector {
+        .ant-select-selection-overflow {
+          padding-right: 5px;
+
+          &-item {
+            .ant-select-selection-item {
+              .flex-align-center();
+              padding-inline-start: 12px;
+              padding-inline-end: 12px;
+              height: 32px;
+              background: @gray-700;
+              border-radius: 20px;
+              margin: 2px 0;
+              margin-inline-end: 4px;
+
+              &-content {
+                .flex-align-center();
+                margin-right: 4px;
+                color: @black-200;
+                font-weight: 500;
+                font-size: 12px;
+              }
+              &-remove {
+                svg > path {
+                  fill: @black-200;
+                }
+              }
+            }
+
+            &-suffix {
+              .flex-align-center();
+              padding-right: 18px;
+
+              .ant-select-selection-search {
+                margin: 0;
+
+                > input {
+                  .mixin-input();
+                }
+              }
+            }
+          }
+        }
+        .ant-select-selection-placeholder {
+          .mixin-input();
+          color: @gray-600;
+          left: 16px;
+        }
+      }
+    }
+  }
+
+  // scoped mixins
+  .mixin-input {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: @blue-200;
+  }
+}
+
+.mvpf-select__dropdown {
+  padding: 0;
+  margin-top: -3px;
+  border-radius: 3px;
+
+  .rc-virtual-list-holder {
+    .ant-select-item-option {
+      padding: 0 8px;
+      min-height: 30px;
+      color: @blue-200;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      &-content {
+        .flex-align-center();
+        width: 100%;
+        flex: 1;
+        padding: 12px 0;
+        border-bottom: 1px solid @gray-100;
+      }
+    }
+  }
+  .rc-virtual-list-scrollbar {
+    width: 4px !important;
+    right: 4px !important;
+
+    &-thumb {
+      background: @gray-400 !important;
+    }
+  }
+
+  &-single {
+    .rc-virtual-list-holder {
+      .ant-select-item-option {
+        &-content {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  &-multiple {
+    .rc-virtual-list-holder {
+      .ant-select-item-option {
+        &-content {
+          .flex-align-center();
+          padding: 0 8px;
+
+          .status {
+            .flex-center();
+            background: @gray-300;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+
+            > svg {
+              width: 14px;
+              height: 14px;
+              object-fit: contain;
+              display: none;
+
+              > path {
+                fill: @white;
+              }
+            }
+          }
+          .label {
+            margin-left: 10px;
+          }
+        }
+        &-selected {
+          background: none;
+
+          .status {
+            background: @blue-200;
+
+            > svg {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-hidden {
+    border-radius: 16px;
+  }
+}
+
+.ant-form-item-has-error {
+  .mvpf-select:not(.ant-select-disabled) {
+    .ant-select-selector {
+      background: @gray-100 !important;
+    }
+  }
+}

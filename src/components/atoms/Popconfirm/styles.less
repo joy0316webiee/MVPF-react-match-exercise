@@ -1,0 +1,30 @@
+.mvpf-pop__confirm {
+  .ant-popover-inner {
+    border-radius: 10px;
+
+    .ant-popover-message {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 20px;
+
+      &-title {
+        padding-left: 0;
+      }
+    }
+    .ant-popover-buttons {
+      .flex-align-center();
+      .flex-justify-end();
+
+      > button {
+        border-radius: 6px;
+
+        &:first-of-type {
+          order: 2;
+        }
+        &:last-of-type {
+          order: 1;
+        }
+      }
+    }
+  }
+}

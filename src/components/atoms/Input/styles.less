@@ -1,0 +1,52 @@
+.mvpf-input {
+  height: 35px;
+  background: @gray-100;
+  border-color: @gray-100;
+  border-radius: 3px;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    border-color: @gray-400;
+    box-shadow: none;
+  }
+
+  // basic
+  &.ant-input {
+    .mixin-input();
+  }
+
+  // scoped mixins
+  .mixin-input {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: @black-200;
+
+    &::placeholder {
+      color: @gray-600;
+      font-weight: 500;
+    }
+  }
+}
+
+// override antd
+.ant-form-item-has-error {
+  .mvpf-input,
+  .mvpf-input:hover {
+    background-color: @gray-100;
+
+    // suffix & prefix
+    .ant-input-suffix,
+    .ant-input-prefix {
+      border-color: @red-100;
+    }
+
+    // phone
+    > input[type="tel"] {
+      box-shadow: 0 0 0 1px @red-100;
+    }
+  }
+}

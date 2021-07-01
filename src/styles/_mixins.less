@@ -1,0 +1,67 @@
+// media query
+.laptop-lg (@rules) {
+  @media (max-width: @screen-xl) {
+    @rules();
+  }
+}
+.laptop (@rules) {
+  @media (max-width: @screen-md) {
+    @rules();
+  }
+}
+.tablet (@rules) {
+  @media (max-width: @screen-sm) {
+    @rules();
+  }
+}
+.mobile (@rules) {
+  @media (max-width: @screen-xs) {
+    @rules();
+  }
+}
+
+// css snippets
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+.flex-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-align-stretch {
+  display: flex;
+  align-items: stretch;
+}
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+.flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

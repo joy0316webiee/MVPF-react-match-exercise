@@ -1,0 +1,93 @@
+.movie-table {
+  .ant-table-tbody {
+    .ant-table-row {
+      > td {
+        height: 110px;
+
+        &.col-title {
+          .flex-align-center();
+          .flex-justify-start();
+          padding: 5px 30px 5px 10px;
+
+          > img {
+            margin-right: 20px;
+            height: 100px;
+            object-fit: contain;
+          }
+          > b {
+            color: @gray-1000;
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+        &.col-release__date,
+        &.col-genre__ids {
+          color: rgba(240, 248, 255, 0.32);
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16px;
+        }
+        &.col-overview {
+          > p {
+            -webkit-line-clamp: 4;
+            color: rgba(240, 248, 255, 0.32);
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.25px;
+          }
+        }
+        &.col-actions {
+          text-align: center;
+
+          > div {
+            .flex-center();
+
+            button {
+              .flex-center();
+              border: none;
+              width: 32px;
+              height: 32px;
+              background: @blue-500;
+              border-radius: 50%;
+              transition: all 0.3s ease-out;
+              cursor: pointer;
+
+              &:hover {
+                filter: brightness(0.8);
+              }
+
+              .laptop({
+                width: 28px;
+                height: 28px;
+              });
+
+              &.btn-view {
+                img {
+                  width: 16px;
+                  object-fit: contain;
+
+                  .laptop({
+                    width: 15px;
+                  });
+                }
+              }
+              &.btn-favorite,
+              &.btn-unfavorite {
+                margin-left: 10px;
+              }
+
+              > svg {
+                width: 18px;
+                height: 18px;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

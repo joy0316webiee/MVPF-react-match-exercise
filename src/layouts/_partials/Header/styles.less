@@ -1,0 +1,66 @@
+.header-wrapper {
+  background-color: rgba(61, 77, 101, 0.3);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+
+  header {
+    .flex-align-center();
+    .flex-justify-between();
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 20px 50px;
+
+    .tablet({
+      padding: 20px 30px;
+    });
+    .mobile({
+      padding: 15px 20px;
+    });
+
+    .logo {
+      .flex-align-center();
+      .flex-column();
+
+      img {
+        height: 50px;
+        object-fit: contain;
+
+        .laptop({
+          height: 45px;
+        });
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: 500;
+        color: @white;
+        text-transform: uppercase;
+        margin-top: 5px;
+
+        .laptop({
+          font-size: 8px;
+          font-weight: 400;
+        });
+      }
+    }
+    .sign-in {
+      button {
+        text-transform: uppercase;
+        color: @blue-300;
+        background: no-repeat;
+        border: none;
+        position: relative;
+        font-size: 12px;
+        font-weight: 400;
+        cursor: pointer;
+
+        .laptop({
+          font-size: 12px;
+        });
+
+        &:hover {
+          filter: brightness(1.2);
+        }
+      }
+    }
+  }
+}

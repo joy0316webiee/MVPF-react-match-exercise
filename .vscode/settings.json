@@ -1,0 +1,16 @@
+{
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": { "javascript": "jsx" },
+  "explorer.confirmDelete": false,
+
+  // Enable/disable default JavaScript formatter (For Prettier)
+  "editor.detectIndentation": false,
+  "editor.foldingStrategy": "indentation",
+  "editor.formatOnSave": false,
+  "[less]": {
+    "editor.formatOnSave": true
+  },
+  "javascript.format.enable": true
+}

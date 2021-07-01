@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+body {
+  min-width: @screen-min;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Montserrat;
+  background-color: @blue-400;
+}
+
+*:not(html):not(body) {
+  scrollbar-width: thin;
+  scrollbar-color: @blue-100 @blue-200;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+
+    &-track {
+      border-radius: 16px;
+    }
+    &-thumb {
+      border-radius: 16px;
+      background-color: @blue-100;
+
+      &:hover {
+        background-color: @blue-300;
+      }
+    }
+  }
+}
+
+// pagination
+.ant-pagination {
+  &-item {
+    a {
+      color: @white;
+    }
+
+    &-link path {
+      fill: @white;
+    }
+    &-ellipsis {
+      color: @white !important;
+    }
+  }
+  &-total-text {
+    color: @white;
+  }
+}
+
+// spin
+.ant-spin-container::after {
+  background: @blue-300;
+  opacity: 0.01;
+}

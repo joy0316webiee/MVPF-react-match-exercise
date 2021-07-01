@@ -1,0 +1,81 @@
+.mvpf-btn {
+  .standard-transition();
+  height: 60px;
+  padding: 20px 40px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+
+  &__primary {
+    border-color: @blue-100;
+    background: @blue-100;
+    color: @white;
+
+    &:hover,
+    &:focus {
+      border-color: lighten(@blue-100, 10);
+      background: lighten(@blue-100, 10);
+      color: @white;
+    }
+  }
+  &__secondary {
+    border-color: @gray-100;
+    background: @gray-100;
+    color: @black-300;
+
+    &:hover,
+    &:focus {
+      border-color: darken(@gray-100, 2);
+      background: darken(@gray-100, 2);
+      color: @black-300;
+    }
+  }
+  &__tertiary {
+    border-color: @green-100;
+    background: @green-100;
+    color: @white;
+
+    &:hover,
+    &:focus {
+      border-color: darken(@green-100, 2);
+      background: darken(@green-100, 2);
+      color: @white;
+    }
+  }
+  &__default {
+    border-color: @gray-300;
+    background: @white;
+    color: @black-300;
+
+    &:hover,
+    &:focus {
+      border-color: darken(@gray-300, 2);
+      background: darken(@white, 2);
+      color: @black-300;
+    }
+  }
+  &__link {
+    height: auto;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: @blue-100;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+
+    &:hover,
+    &:focus {
+      background: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
